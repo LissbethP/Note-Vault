@@ -19,15 +19,7 @@ const Login = ({ navigation, route }) => {
       <Text style={styles.forgotPassword}>Forgot your password?</Text>
       <TouchableOpacity onPress={() => navigation.navigate("Signup")}>
         <Text>Don't have an account? Sign up</Text>
-      </TouchableOpacity>
-      <SocialButton 
-        buttonTitle="Sign In with Facebook"
-        btnType="facebook"
-        color="#4867aa"
-        backgroundColor="#e6eaf4"
-        onPress={() => {}}
-      />
-      
+      </TouchableOpacity>      
       <SocialButton 
         buttonTitle="Sign In with Google"
         btnType="google"

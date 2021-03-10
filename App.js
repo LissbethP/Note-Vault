@@ -38,6 +38,16 @@ export default function App() {
               <Stack.Screen
                 name="Home"
                 component={Home}
+                options={{
+                  title: "Note Vaults",
+                  headerRight: () => (
+                    <TouchableOpacity>
+                      <Text>Hello</Text>
+                    </TouchableOpacity>
+                    
+                    
+                  ),
+                }}
                 initialParams={{ user: user }}
               />
           </Stack.Navigator>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "875420519170",
+    "project_id": "notevault-a2667",
+    "storage_bucket": "notevault-a2667.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:875420519170:android:a077a610fa45a0a305d01b",
+        "android_client_info": {
+          "package_name": "com.landl.notevaults"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "875420519170-gn5dhl6pcbdbfu3e3r591i3ivjcuopeg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.landl.notevaults",
+            "certificate_hash": "5d2a817524728b2f8334bd864d8c9962eded0ce0"
+          }
+        },
+        {
+          "client_id": "875420519170-9oq79ccb46p1pjtf6j01evsma8ubun2d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzwUi9XzWcVIcQc1bzyWLlekSeTXpRwNw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "875420519170-9oq79ccb46p1pjtf6j01evsma8ubun2d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
