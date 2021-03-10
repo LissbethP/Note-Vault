@@ -27,15 +27,7 @@ export default function App() {
       <SafeAreaProvider>
         <NavigationContainer>
           <Stack.Navigator>
-            {/* Mostrar un Stack distinto dependiendo el nivel de autenticación */}
-            {user ? (
-              <Stack.Screen
-                name="Home"
-                component={Home}
-                initialParams={{ user: user }}
-              />
-            ) : (
-              <>
+            {/* Mostrar un Stack distinto dependiendo el nivel de autenticación */}            
                 <Stack.Screen
                   name="Signin"
                   component={Signin}
@@ -43,8 +35,11 @@ export default function App() {
                   options={{ headerShown: false }}
                 />
                 <Stack.Screen name="Signup" component={Signup} />
-              </>
-            )}
+              <Stack.Screen
+                name="Home"
+                component={Home}
+                initialParams={{ user: user }}
+              />
           </Stack.Navigator>
         </NavigationContainer>
       </SafeAreaProvider>
