@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import {useState, useEffect} from "react";
 import { StyleSheet, Text, View } from 'react-native';
@@ -9,8 +8,10 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Signin from "./src/components/screens/Signin";
 import Signup from "./src/components/screens/Signup";
 import Home from "./src/components/screens/Home";
+import Settings from "./src/components/screens/Settings";
 import theme from "./src/theme";
 import PersistLogin from "./src/utils/persistLogin";
+
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -28,28 +29,19 @@ export default function App() {
         <NavigationContainer>
           <Stack.Navigator>
             {/* Mostrar un Stack distinto dependiendo el nivel de autenticación */}            
-                <Stack.Screen
-                  name="Signin"
-                  component={Signin}
-                  initialParams={{ userCreated: false }}
-                  options={{ headerShown: false }}
-                />
-                <Stack.Screen name="Signup" component={Signup} />
+                      <Stack.Screen
+                        name="Signin"
+                        component={Signin}
+                        initialParams={{ userCreated: false }}
+                        options={{ headerShown: false }}
+                      />
+                      <Stack.Screen name="Signup" component={Signup} />
               <Stack.Screen
                 name="Home"
                 component={Home}
-                options={{
-                  title: "Note Vaults",
-                  headerRight: () => (
-                    <TouchableOpacity>
-                      <Text>Hello</Text>
-                    </TouchableOpacity>
-                    
-                    
-                  ),
-                }}
                 initialParams={{ user: user }}
               />
+              <Stack.Screen name="Settings" component={Settings} />
           </Stack.Navigator>
         </NavigationContainer>
       </SafeAreaProvider>

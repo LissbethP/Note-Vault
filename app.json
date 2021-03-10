@@ -22,6 +22,7 @@
       "config": {
         "googleSignIn": {
           "reservedClientId": "com.googleusercontent.apps.875420519170-9agngrm01aunfto4hgln5tcvmb24lrmh"
+        }
         },
       "googleServicesFile": "GoogleService-Info.plist"
     },

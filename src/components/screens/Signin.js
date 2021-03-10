@@ -1,11 +1,13 @@
-import React from "react";
+import React, { Component } from 'react';
 import { StyleSheet, TouchableOpacity, View, Text } from "react-native";
 import Logo from "../shared/Logo";
 import SigninForm from "../forms/SigninForm";
 import theme from "../../theme";
 import Alert from "../shared/Alert";
 import SocialButton from '../shared/SocialButtons';
-
+import GoogleSignIn from '../../providers/GoogleSignIn'
+import * as AppAuth from 'expo-app-auth';
+const { URLSchemes } = AppAuth;
 
 const Login = ({ navigation, route }) => {
   const { userCreated } = route.params;
@@ -25,7 +27,16 @@ const Login = ({ navigation, route }) => {
         btnType="google"
         color="#de4d41"
         backgroundColor="#f5e7ea"
-        onPress={() => {}}
+        onPress={() => {
+          try {
+            GoogleSignIn.initAsync({
+              clientId: '875420519170-9agngrm01aunfto4hgln5tcvmb24lrmh.apps.googleusercontent.com',
+            });
+          } catch ({ message }) {
+            alert('GoogleSignIn.initAsync(): ' + message);
+          }
+          
+        }}
       />
     </View>
   );
@@ -36,7 +47,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     padding: 10,
-    backgroundColor: theme.colors.backgroundWhite,
+    backgroundColor: theme.colors.bgw,
   },
   forgotPassword: {
     textAlign: "right",

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Text } from 'react-native';
 import * as GoogleSignIn from 'expo-google-sign-in';
 
@@ -11,7 +11,7 @@ export default class AuthScreen extends React.Component {
 
   initAsync = async () => {
     await GoogleSignIn.initAsync({
-      clientId: 'com.googleusercontent.apps.875420519170-9agngrm01aunfto4hgln5tcvmb24lrmh',
+      clientId: '875420519170-9agngrm01aunfto4hgln5tcvmb24lrmh.apps.googleusercontent.com',
     });
     this._syncUserWithStateAsync();
   };
