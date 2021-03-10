@@ -6,7 +6,7 @@ export default function GearButton({...rest}) {
     return (
         <TouchableOpacity {...rest}>
             <View>
-                <FontAwesome name={"gear"} style={styles.icon} size={32} color={theme.colors.secondary} />
+                <FontAwesome name={"gear"} style={styles.icon} size={32} color={theme.colors.purple} />
             </View>
         </TouchableOpacity>
     )
@@ -15,7 +15,7 @@ export default function GearButton({...rest}) {
 const styles = StyleSheet.create({
     icon:{
         fontWeight: 'bold',
-        paddingRight: 10,
+        paddingRight: 20,
     }
 })
 

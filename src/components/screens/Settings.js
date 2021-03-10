@@ -6,7 +6,7 @@ import theme from '../../theme/index'
 const Settings = ({ navigation })=>{
     React.useLayoutEffect(() => {
         navigation.setOptions({
-          title: 'NoteVault',
+          title: 'Ajustes',
           headerStyle: {
             backgroundColor: theme.colors.primary,
           },
