@@ -4,6 +4,8 @@ import Logo from "../shared/Logo";
 import SigninForm from "../forms/SigninForm";
 import theme from "../../theme";
 import Alert from "../shared/Alert";
+import SocialButton from '../shared/SocialButtons';
+
 
 const Login = ({ navigation, route }) => {
   const { userCreated } = route.params;
@@ -18,6 +20,21 @@ const Login = ({ navigation, route }) => {
       <TouchableOpacity onPress={() => navigation.navigate("Signup")}>
         <Text>Don't have an account? Sign up</Text>
       </TouchableOpacity>
+      <SocialButton 
+        buttonTitle="Sign In with Facebook"
+        btnType="facebook"
+        color="#4867aa"
+        backgroundColor="#e6eaf4"
+        onPress={() => {}}
+      />
+      
+      <SocialButton 
+        buttonTitle="Sign In with Google"
+        btnType="google"
+        color="#de4d41"
+        backgroundColor="#f5e7ea"
+        onPress={() => {}}
+      />
     </View>
   );
 };

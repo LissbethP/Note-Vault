@@ -4,6 +4,7 @@ import { Button, Input, Text } from "react-native-elements";
 import Logo from "../shared/Logo";
 import SignupForm from "../forms/SignupForm";
 import theme from "../../theme";
+import SocialButton from '../shared/SocialButtons';
 
 const { width, height } = Dimensions.get("screen");
 
@@ -19,6 +20,21 @@ const Signup = ({ navigation }) => {
       >
         <Text>Already got an account? Sign in</Text>
       </TouchableOpacity>
+      <SocialButton 
+        buttonTitle="Sign Up with Facebook"
+        btnType="facebook"
+        color="#4867aa"
+        backgroundColor="#e6eaf4"
+        onPress={() => {}}
+      />
+      
+      <SocialButton 
+        buttonTitle="Sign Up with Google"
+        btnType="google"
+        color="#de4d41"
+        backgroundColor="#f5e7ea"
+        onPress={() => {}}
+      />
     </View>
   );
 };

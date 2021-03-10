@@ -1,7 +1,7 @@
 import React from "react";
 import { Dimensions, StyleSheet, View } from "react-native";
 import { Image } from "react-native-elements";
-
+import logo_vertical from '../../assets/logo_vertical.png';
 const { width, height } = Dimensions.get("screen");
 
 const Logo = () => {
@@ -9,7 +9,7 @@ const Logo = () => {
     <View style={styles.container}>
       <Image
         style={styles.logo}
-        source={{ uri: require("../../assets/logo_vertical.png") }}
+        source={logo_vertical}
       />
     </View>
   );

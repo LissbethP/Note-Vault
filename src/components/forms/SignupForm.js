@@ -5,6 +5,7 @@ import Icon from "react-native-vector-icons/FontAwesome";
 import { firebase } from "../../firebase";
 import { validate } from "email-validator";
 import Alert from "../shared/Alert";
+import SocialButton from '../shared/SocialButtons'
 
 const SignupForm = ({ navigation }) => {
   const [fullname, setFullname] = useState("");
