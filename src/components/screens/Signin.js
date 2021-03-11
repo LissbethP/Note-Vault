@@ -5,9 +5,10 @@ import SigninForm from "../forms/SigninForm";
 import theme from "../../theme";
 import Alert from "../shared/Alert";
 import SocialButton from '../shared/SocialButtons';
-import GoogleSignIn from '../../providers/GoogleSignIn'
 import * as AppAuth from 'expo-app-auth';
+import firebase from "firebase/app";
 const { URLSchemes } = AppAuth;
+var provider = new firebase.auth.GoogleAuthProvider();
 
 const Login = ({ navigation, route }) => {
   const { userCreated } = route.params;
@@ -18,7 +19,9 @@ const Login = ({ navigation, route }) => {
         <Alert type="success" title="User created! You can now sign in!" />
       ) : null}
       <SigninForm navigation={navigation} />
-      <Text style={styles.forgotPassword}>Forgot your password?</Text>
+      <TouchableOpacity onPress={() => navigation.navigate("ForgotPass")}>
+        <Text style={styles.forgotPassword}>Forgot your password?</Text>
+      </TouchableOpacity>
       <TouchableOpacity onPress={() => navigation.navigate("Signup")}>
         <Text>Don't have an account? Sign up</Text>
       </TouchableOpacity>      
@@ -28,14 +31,28 @@ const Login = ({ navigation, route }) => {
         color="#de4d41"
         backgroundColor="#f5e7ea"
         onPress={() => {
-          try {
-            GoogleSignIn.initAsync({
-              clientId: '875420519170-9agngrm01aunfto4hgln5tcvmb24lrmh.apps.googleusercontent.com',
-            });
-          } catch ({ message }) {
-            alert('GoogleSignIn.initAsync(): ' + message);
-          }
-          
+          firebase.auth()
+          .signInWithPopup(provider)
+          .then((result) => {
+            /** @type {firebase.auth.OAuthCredential} */
+            var credential = result.credential;
+
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            var token = credential.accessToken;
+            // The signed-in user info.
+            var user = result.user;
+            // ...
+            navigation.navigate("Home");
+          }).catch((error) => {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // The email of the user's account used.
+            var email = error.email;
+            // The firebase.auth.AuthCredential type that was used.
+            var credential = error.credential;
+            // ...
+          });
         }}
       />
     </View>
