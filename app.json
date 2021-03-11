@@ -17,13 +17,22 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.landl.notevaults",
+      "config": {
+        "googleSignIn": {
+          "reservedClientId": "com.googleusercontent.apps.875420519170-9agngrm01aunfto4hgln5tcvmb24lrmh"
+        }
+        },
+      "googleServicesFile": "GoogleService-Info.plist"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.landl.notevaults",
+      "googleServicesFile": "google-services.json"
     },
     "web": {
       "favicon": "./assets/favicon.png"
