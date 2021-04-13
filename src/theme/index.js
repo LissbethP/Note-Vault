@@ -7,6 +7,7 @@ const theme = {
       green: "#0aebaf",
       orange: "#ff7746",
       bgw: "#f4f4f2",
+      gray: "#808080",
     },
   };
   

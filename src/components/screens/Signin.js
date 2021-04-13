@@ -11,13 +11,9 @@ const { URLSchemes } = AppAuth;
 var provider = new firebase.auth.GoogleAuthProvider();
 
 const Login = ({ navigation, route }) => {
-  const { userCreated } = route.params;
   return (
     <View style={styles.container}>
       <Logo />
-      {userCreated ? (
-        <Alert type="success" title="User created! You can now sign in!" />
-      ) : null}
       <SigninForm navigation={navigation} />
       <TouchableOpacity onPress={() => navigation.navigate("ForgotPass")}>
         <Text style={styles.forgotPassword}>Forgot your password?</Text>

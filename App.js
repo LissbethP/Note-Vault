@@ -1,61 +1,24 @@
-import React from 'react';
-import { useState, useEffect } from "react";
-import { StyleSheet, Text, View } from 'react-native';
-import { ThemeProvider } from 'react-native-elements';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import Signin from "./src/components/screens/Signin";
-import Signup from "./src/components/screens/Signup";
-import Home from "./src/components/screens/Home";
-import Settings from "./src/components/screens/Settings";
-import ForgotPassword from "./src/components/screens/ForgotPass";
+import React from "react";
+import { Provider as PaperProvider } from "react-native-paper";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import Navigation from "./src/components/navigation";
 import theme from "./src/theme";
-import PersistLogin from "./src/utils/persistLogin";
-
-const Stack = createStackNavigator();
+import { Provider as AuthProvider } from "./src/providers/AuthContext";
+import { Provider as NoteProvider } from "./src/providers/NoteContext";
+import LongTimers from "./src/utils/LongTimers";
 
 export default function App() {
-  const [user, setUser] = useState({});
-
-  // Verificar si ya existen credenciales de autenticación
-  useEffect(() => {
-    const userData = PersistLogin();
-    setUser(userData);
-  }, []);
+  LongTimers();
 
   return (
-    <ThemeProvider theme={theme}>
-      <SafeAreaProvider>
-        <NavigationContainer>
-          <Stack.Navigator>
-            {/* Mostrar un Stack distinto dependiendo el nivel de autenticación */}
-            <Stack.Screen
-              name="Signin"
-              component={Signin}
-              initialParams={{ userCreated: false }}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen name="Signup" component={Signup} />
-            <Stack.Screen
-              name="Home"
-              component={Home}
-              initialParams={{ user: user }}
-            />
-            <Stack.Screen name="Settings" component={Settings} />
-            <Stack.Screen name="ForgotPass" options={{ headerShown: false }} component={ForgotPassword} />
-          </Stack.Navigator>
-        </NavigationContainer>
-      </SafeAreaProvider>
-    </ThemeProvider>
+    <AuthProvider>
+      <NoteProvider>
+        <PaperProvider theme={theme}>
+          <SafeAreaProvider>
+            <Navigation />
+          </SafeAreaProvider>
+        </PaperProvider>
+      </NoteProvider>
+    </AuthProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
