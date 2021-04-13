@@ -42,9 +42,7 @@ const ModifyNote = ({ navigation }) => {
             <IconButton icon="check-circle"
               color={theme.colors.purple}
               size = {30}
-              onPress={() => {
-                onPress={handleSaveNote}
-              }}
+              onPress={handleSaveNote}
             />
           ),
     });
