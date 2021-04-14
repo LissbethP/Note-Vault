@@ -3,7 +3,7 @@
 Aplicación de proyecto Movil II 
 
 La aplicación Vaul de Notas, cumple la función de almacenar fotos y videos en la nube
-pero esta los ocultará mostrando una app de notas en donde se puede ecribir, editar y agregar notas. 
+pero esta los ocultará mostrando una app de notas en donde se puede escribir, editar y agregar notas. 
 
 
 # Imágenes del proyecto
