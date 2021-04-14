@@ -11,6 +11,8 @@ Note-Vault
 
 # Tecnologías utilizadas
 
+  ![Tecnologia](https://user-images.githubusercontent.com/55729897/114793559-dbc08c00-9d47-11eb-8abc-1a9203ad9dfe.PNG)
+
 # Instrucciones para la instalación
 Clona este repositorio. Necesitas tener instalado node, npm y expo-cli de manera global en tu computadora.
 
