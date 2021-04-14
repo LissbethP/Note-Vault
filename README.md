@@ -1,5 +1,5 @@
+ ![Logo (1)](https://user-images.githubusercontent.com/55729897/114794025-dadc2a00-9d48-11eb-81e5-314bb2e63287.jpeg)
 
-![Logo](https://user-images.githubusercontent.com/55729897/114793917-abc5b880-9d48-11eb-92b4-8adb831c5222.jpeg)
 
 # Note-Vault
 Aplicación de proyecto Movil II 
