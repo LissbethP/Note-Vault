@@ -16,33 +16,7 @@ Clona este repositorio. Necesitas tener instalado node, npm y expo-cli de manera
 
 Debes crear el archivo enviroment.js en la raíz del directorio y configurarlo de la siguiente manera:
 
-import Constant from 'expo-constants';
-
-const ENV = {
-    dev:{
-        apiKey: "AIzaSyCUcgFN8JLn4PO-qRuI5KoVGWpkHK_LFiA",
-        authDomain: "notevault-a2667.firebaseapp.com",
-        projectId: "notevault-a2667",
-        storageBucket: "notevault-a2667.appspot.com",
-        messagingSenderId: "875420519170",
-        appId: "1:875420519170:web:3d61dba62c3b6b2a05d01b"
-    },
-    production: {
-        apiKey: "AIzaSyCUcgFN8JLn4PO-qRuI5KoVGWpkHK_LFiA",
-        authDomain: "notevault-a2667.firebaseapp.com",
-        projectId: "notevault-a2667",
-        storageBucket: "notevault-a2667.appspot.com",
-        messagingSenderId: "875420519170",
-        appId: "1:875420519170:web:3d61dba62c3b6b2a05d01b" 
-    }
-};
-
-const getEnvVars = (env = Constant.manifest.releaseChannel) => {
-    if(__DEV__) return ENV.dev;
-    else if(env === "production" || env === "default") return ENV.production;
-};
-
-export default getEnvVars;
+![Codigo](https://user-images.githubusercontent.com/55729897/114791207-5b982780-9d43-11eb-8043-b9d44372d711.PNG)
 
 
 
