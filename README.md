@@ -2,12 +2,20 @@
 # Note-Vault
 Aplicación de proyecto Movil II 
 
-Presentado por: Lissbeth Peralta & Lener Quiroz
-
-Proyecto expo: https://expo.io/@lenerq/NoteVault
 
 Note-Vault 
 
 La aplicación Vaul de Notas, cumple la función de almacenar fotos y videos en la nube
 pero esta los ocultará mostrando una app de notas en donde se puede ecribir, editar y agregar notas. 
 
+
+
+# Presentado por: Lissbeth Peralta & Lener Quiroz
+
+Proyecto expo: https://expo.io/@lenerq/NoteVault
+
+Instalación:
+npm install
+
+Iniciar Expo Metro:
+expo start
