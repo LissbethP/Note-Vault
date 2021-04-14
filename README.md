@@ -1,9 +1,8 @@
 ![Logo (1) (1) (1)](https://user-images.githubusercontent.com/55729897/114794540-eaa83e00-9d49-11eb-83c3-b3711de1f087.jpeg)
 
 
-# Note-Vault
-Aplicación de proyecto Movil II 
 
+# Note-Vault
 La aplicación Vaul de Notas, cumple la función de almacenar fotos y videos en la nube
 pero esta los ocultará mostrando una app de notas en donde se puede escribir, editar y agregar notas. 
 
@@ -16,16 +15,20 @@ Clona este repositorio. Necesitas tener instalado node, npm y expo-cli de manera
 
 Debes crear el archivo enviroment.js en la raíz del directorio y configurarlo de la siguiente manera:
 
-![Codigo](https://user-images.githubusercontent.com/55729897/114791207-5b982780-9d43-11eb-8043-b9d44372d711.PNG)
-
-Instalación:
-npm install
-
-Iniciar Expo Metro:
-expo start
+![Codigo](https://user-images.githubusercontent.com/55729897/114791207-5b982780-9d43-11eb-8043-b9d44372d711.PNG
 
 # Documentación
 
-Presentado por: Lissbeth Peralta & Lener Quiroz
+
+# Instalación
+
+npm install
+
+# Iniciar Expo Metro
+expo start
+
+# Contribuidores 
+![Integrantes](https://user-images.githubusercontent.com/55729897/114795022-ed576300-9d4a-11eb-8be5-73a810bf1320.PNG)
+
 
 Proyecto expo: https://expo.io/@lenerq/NoteVault
