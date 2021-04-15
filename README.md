@@ -34,4 +34,4 @@ expo start
 ![Integrantes](https://user-images.githubusercontent.com/55729897/114795022-ed576300-9d4a-11eb-8be5-73a810bf1320.PNG)
 
 
-Proyecto expo: https://expo.io/@lenerq/NoteVault
+Proyecto expo: https://expo.io/@lenerq/projects/NoteVault?release-channel=staging
