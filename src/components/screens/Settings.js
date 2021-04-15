@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useContext, useEffect } from "react";
 import {Text, View, StyleSheet, StatusBar} from 'react-native'
+import { Button,Provider as PaperProvider } from 'react-native-paper';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import theme from '../../theme/index'
+import { Context as AuthContext } from "../../providers/AuthContext";
+
 
 const Settings = ({ navigation })=>{
+  const { state, signout } = useContext(AuthContext);
+
     React.useLayoutEffect(() => {
         navigation.setOptions({
           title: 'Ajustes',
@@ -19,9 +24,14 @@ const Settings = ({ navigation })=>{
     return(
       <SafeAreaView style={styles.container}>
         <StatusBar barStyle="light-content" backgroundColor= {theme.colors.primary} />
-        <View>
-          <Text>Hello from settings</Text> 
-        </View>
+        <PaperProvider>
+          <View style={styles.container}>
+            <Button color={theme.colors.primary} icon="logout-variant" mode="contained" onPress={() => {signout();}}>
+              Log Out
+            </Button>
+          </View>
+
+        </PaperProvider>
       </SafeAreaView>        
     );
 };

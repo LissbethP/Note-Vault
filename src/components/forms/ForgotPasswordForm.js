@@ -1,15 +1,20 @@
-import React, { useState } from "react";
+import React, { useState,useContext,useEffect } from "react";
 import { StyleSheet, View, Text } from "react-native";
 import { Input, Button } from "react-native-elements";
 import Icon from "react-native-vector-icons/FontAwesome";
 import { validate } from "email-validator";
 import { firebase } from "../../firebase";
 import Alert from "../shared/Alert";
+import { Context as AuthContext } from "../../providers/AuthContext";
+
 
 const ForgotPasswordForm = ({navigation}) =>{
+
+    // const { state} = useContext(AuthContext);
     const [email, setEmail] = useState("");
-    const [error, setError] = useState("");
+    const [errorE, setErrorE] = useState("");  
     const [emailError, setEmailError] = useState(false);
+    
 
     const handleVerify = (input) => {
         if (input === "email") {
@@ -24,14 +29,14 @@ const ForgotPasswordForm = ({navigation}) =>{
             .then((response) =>{
                 navigation.navigate("Signin");
             })
-            .catch((error) => {
-                setError(error.message);
+            .catch((errorE) => {
+                setErrorE(errorE.message);
             });
     }
     
     return(
         <View>
-            {error ? <Alert title={error} type="error" /> : null}
+            {/* {errorE ? <Alert title={errorE} type="error" /> : null} */}
             <Input
                 placeholder="Email"
                 leftIcon={<Icon name="envelope" />}
