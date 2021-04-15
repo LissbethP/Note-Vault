@@ -22,14 +22,21 @@ Debes crear el archivo enviroment.js en la raíz del directorio y configurarlo d
 # Documentación
 https://drive.google.com/file/d/1ziK8RzopFsPyyU0Eh5J_FjKZNBAayw9_/view?usp=sharing
 
+# Requerimientos
+[NodeJS](https://nodejs.org/en/)
+```npm
+npm install --global expo-cli
+```
 
 # Instalación
-
+```npm
 npm install
+```
 
 # Iniciar Expo Metro
+```npm
 expo start
-
+```
 # Contribuidores 
 ![Integrantes](https://user-images.githubusercontent.com/55729897/114795022-ed576300-9d4a-11eb-8be5-73a810bf1320.PNG)
 
