@@ -8,7 +8,8 @@ pero esta los ocultará mostrando una app de notas en donde se puede escribir, e
 
 # Tecnologías utilizadas
 
-  ![Tecnologia](https://user-images.githubusercontent.com/55729897/114793559-dbc08c00-9d47-11eb-8abc-1a9203ad9dfe.PNG)
+![Tecnologia](https://user-images.githubusercontent.com/55729897/114795929-fe08d880-9d4c-11eb-9976-005d6a563852.PNG)
+
 
 # Instrucciones para la instalación
 Clona este repositorio. Necesitas tener instalado node, npm y expo-cli de manera global en tu computadora.
