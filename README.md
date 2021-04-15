@@ -16,7 +16,8 @@ Clona este repositorio. Necesitas tener instalado node, npm y expo-cli de manera
 
 Debes crear el archivo enviroment.js en la raíz del directorio y configurarlo de la siguiente manera:
 
-![Codigo](https://user-images.githubusercontent.com/55729897/114791207-5b982780-9d43-11eb-8043-b9d44372d711.PNG
+![Codigo](https://user-images.githubusercontent.com/55729897/114795984-1547c600-9d4d-11eb-8166-0d2f93695b83.PNG)
+
 
 # Documentación
 
