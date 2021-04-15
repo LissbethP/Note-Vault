@@ -10,7 +10,7 @@ import Settings from "../screens/Settings";
 import ForgotPassword from "../screens/ForgotPass";
 import CreateNote from "../screens/CreateNote";
 import ModifyNote from "../screens/ModifyNote";
-
+import HomeVault from "../screens/HomeVault";
 const Stack = createStackNavigator();
 
 const Navigation = () => {
@@ -39,6 +39,7 @@ const Navigation = () => {
                 <Stack.Navigator>
                     <Stack.Screen name="Home" component={Home} />
                     <Stack.Screen name="Settings" component={Settings} />
+                    <Stack.Screen name="HomeVault" component={HomeVault} />
                     <Stack.Screen name="CreateNote" component={CreateNote} />
                     <Stack.Screen name="ModifyNote" component={ModifyNote} />
                 </Stack.Navigator>

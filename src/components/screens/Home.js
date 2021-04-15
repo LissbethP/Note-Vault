@@ -38,7 +38,7 @@ const Home = ({ navigation }) => {
             fontWeight: 'bold',
           },
       headerRight: () => (
-        <GearButton onPress={()=>{ navigation.navigate('Settings') }} />
+        <GearButton onLongPress={()=>navigation.navigate('HomeVault')} onPress={()=>{ navigation.navigate('Settings') }} />
       ),
     });
   });
