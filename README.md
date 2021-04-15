@@ -8,7 +8,7 @@ pero esta los ocultará mostrando una app de notas en donde se puede escribir, e
 
 # Tecnologías utilizadas
 
-![Tecnologia](https://user-images.githubusercontent.com/55729897/114795929-fe08d880-9d4c-11eb-9976-005d6a563852.PNG)
+![Nuevo](https://user-images.githubusercontent.com/55729897/114797909-6ce83080-9d51-11eb-8400-2f9bb9aed4e9.PNG)
 
 
 # Instrucciones para la instalación
